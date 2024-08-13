@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import resumePdf from '../assets/supportingFiles/resume.pdf';
+import resumePdf from '/bhaveshRsm.pdf';
 
 const Resume = () => {
   const [showResume, setShowResume] = useState(false);
@@ -35,7 +35,7 @@ const Resume = () => {
   const handleDownloadResume = () => {
     const link = document.createElement('a');
     link.href = resumePdf; // Path to your PDF file in the public directory
-    link.download = 'resume.pdf';
+    link.download = 'bhaveshRsm.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
