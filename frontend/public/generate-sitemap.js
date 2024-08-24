@@ -50,5 +50,6 @@ const generateSitemap = async () => {
     console.error('Error generating sitemap:', error);
   }
 };
-
-generateSitemap();
+setTimeout(() => {
+  generateSitemap();
+}, 5000);

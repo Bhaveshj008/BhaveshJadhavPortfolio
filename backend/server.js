@@ -93,7 +93,7 @@ app.get('/api/blogs/', async (req, res) => {
         publications(first: 1) {
           edges {
             node {
-              posts(first: ${limit || 50}) { 
+              posts(first: ${limit || 0}) { 
                 edges {
                   node {
                     title
