@@ -10,14 +10,14 @@ const generateSitemap = async () => {
   try {
     // Fetch your blog and project data dynamically
     const [blogsResponse, projectsResponse] = await Promise.all([
-      axios.get('https://www.bhaveshjadhav.online/api/blogs'), // Use the correct port
-      axios.get('https://www.bhaveshjadhav.online/api/projects') // Use the correct port
+      axios.get('http://localhost:3000/api/blogs'), // Use the correct port
+      axios.get('http://localhost:3000/api/projects') // Use the correct port
     ]);
     const blogs = blogsResponse.data;
     const projects = projectsResponse.data;
-
+  
     const currentDate = new Date().toISOString();
-
+      
     const urls = [
       { loc: 'https://www.bhaveshjadhav.online/', lastmod: currentDate },
       { loc: 'https://www.bhaveshjadhav.online/blog/', lastmod: currentDate },
@@ -41,7 +41,7 @@ const generateSitemap = async () => {
       </urlset>`;
 
     // Write sitemap to the public directory
-    const publicDir = path.join(__dirname, '../frontend/public');
+    const publicDir = path.join(__dirname, '/');
     await fs.ensureDir(publicDir);
     await fs.writeFile(path.join(publicDir, 'sitemap.xml'), sitemap);
 

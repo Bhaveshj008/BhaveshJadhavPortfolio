@@ -90,7 +90,7 @@ app.get('/api/blogs/', async (req, res) => {
   const query = `
     query {
       user(username: "${process.env.HASHNODE_USERNAME}") {
-        publications(first: ${limit || 50}) {
+        publications(first: 1) {
           edges {
             node {
               posts(first: ${limit || 50}) { 
