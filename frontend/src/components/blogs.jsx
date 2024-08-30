@@ -66,7 +66,7 @@ const Blogs = () => {
           <p>Welcome to my learning journey! Discover my latest articles simplifying complex topics and sharing practical tips. Let's expand our knowledge together!</p>
         </div>
         <div className="row">
-          {blogs && blogs.length > 0 && blogs.map((blog, index) => (
+          {blogs && blogs.length > 0 && blogs.map((blog) => (
             <div key={blog.id} className="col-lg-4 col-md-6">
               <Link to={`/blog/${blog.slug}`} className="read-more">
                 <div className="blog-item">
