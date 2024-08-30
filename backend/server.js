@@ -96,6 +96,7 @@ app.get('/api/blogs/', async (req, res) => {
               posts(first: ${limit || 0}) { 
                 edges {
                   node {
+                    id
                     title
                     brief
                     slug

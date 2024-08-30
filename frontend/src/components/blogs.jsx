@@ -67,7 +67,7 @@ const Blogs = () => {
         </div>
         <div className="row">
           {blogs && blogs.length > 0 && blogs.map((blog, index) => (
-            <div key={index} className="col-lg-4 col-md-6">
+            <div key={blog.id} className="col-lg-4 col-md-6">
               <Link to={`/blog/${blog.slug}`} className="read-more">
                 <div className="blog-item">
                   <img src={blog.coverImage.url} alt={blog.title} className="img-fluid" />
@@ -75,10 +75,10 @@ const Blogs = () => {
                     <h4>{blog.title}</h4>
                   </div>
                   <div className="post-details">
-  <div className="read-time"><i className='bx bx-book-reader'></i>{blog.readTimeInMinutes} min read</div>
-  <div className="reaction-count"><i className="bi-heart-fill"></i>{blog.reactionCount} likes</div>
-  <div className="published-at"><i className='bx bx-calendar' ></i>{new Date(blog.publishedAt).toLocaleDateString()}</div>
-</div>
+                    <div className="read-time"><i className='bx bx-book-reader'></i>{blog.readTimeInMinutes} min read</div>
+                    <div className="reaction-count"><i className="bi-heart-fill"></i>{blog.reactionCount} likes</div>
+                    <div className="published-at"><i className='bx bx-calendar' ></i>{new Date(blog.publishedAt).toLocaleDateString()}</div>
+                  </div>
 
                 </div>
               </Link>

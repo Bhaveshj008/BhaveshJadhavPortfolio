@@ -76,7 +76,7 @@ const AllBlogs = () => {
           </div>
           <div className="row">
             {blogs && blogs.length > 0 && blogs.map((blog, index) => (
-              <div key={index} className="col-lg-4 col-md-6">
+              <div key={blog.id} className="col-lg-4 col-md-6">
                 <Link to={`/blog/${blog.slug}`} className="read-more">
                   <div className="blog-item">
                     <img src={blog.coverImage.url} alt={blog.title} className="img-fluid" />
