@@ -104,7 +104,7 @@ const Resume = () => {
             </div>
             <div>
               <h3>Agro Mall</h3>
-              <p>Innovative e-commerce platform tailored for agricultural products with a robust backend developed in PHP and a sleek front end crafted with HTML, CSS, JavaScript, jQuery, Ajax, Bootstrap. Features include an advanced admin panel with analytics, order management, expense tracking, billing software, offer management, user and role management, and secure delivery updates with OTP-based authentication. <a href="https://agromall.000webhostapp.com/" target="_blank" rel="noopener noreferrer">Live Demo</a></p>
+              <p>Innovative e-commerce platform tailored for agricultural products with a robust backend developed in PHP and a sleek front end crafted with HTML, CSS, JavaScript, jQuery, Ajax, Bootstrap. Features include an advanced admin panel with analytics, order management, expense tracking, billing software, offer management, user and role management, and secure delivery updates with OTP-based authentication. <a href="https://agromall.rf.gd/" target="_blank" rel="noopener noreferrer">Live Demo</a></p>
             </div>
             <div>
               <h3>Global Cafe Management System</h3>
