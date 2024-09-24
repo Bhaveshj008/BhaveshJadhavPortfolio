@@ -48,6 +48,7 @@ const ProjectDetails = () => {
   const ogImage = project.ogImage;
   const ogURL = `https://www.bhaveshjadhav.online/project/${project.slug}`;
   return (
+    <main id="main">
     <HelmetProvider>
     <SEOManager title={title} description={description} keywords={keywords} ogImage={ogImage} type={'article'} ogURL={ogURL}/>
     <div className="project-detail">
@@ -115,6 +116,7 @@ const ProjectDetails = () => {
       </div>
     </div>
         </HelmetProvider>
+        </main>
   );
 };
 

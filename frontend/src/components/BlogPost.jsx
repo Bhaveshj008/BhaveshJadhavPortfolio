@@ -68,6 +68,7 @@ const BlogPost = () => {
   const ogImage = post.ogMetaData.image;
   const ogURL = `https://www.bhaveshjadhav.online/blog/${post.slug}`;
   return (
+    <main id="main">
     <HelmetProvider>
      
       <SEOManager title={title} description={description} keywords={keywords} ogImage={ogImage} type={'article'} ogURL={ogURL}/>
@@ -108,6 +109,7 @@ const BlogPost = () => {
       </div>
     </div>
     </HelmetProvider>
+    </main>
   );
 };
 
