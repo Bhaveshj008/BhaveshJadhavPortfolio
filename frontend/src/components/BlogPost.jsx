@@ -1,4 +1,4 @@
-// BlogPost.jsx
+
 import React, { useEffect, useState, useRef } from 'react';
 import { useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
@@ -7,7 +7,7 @@ import rehypeRaw from 'rehype-raw';
 import CodeBlock from '../assets/supportingFiles/codeblock.jsx'; 
 import '../assets/css/blogpost.css';
 import axios from 'axios';
-import ImageComponent from './blogImages.jsx'; // Adjust the path based on your project structure
+import ImageComponent from './blogImages.jsx';
 import Toolbar from './toolbar.jsx';
 import SEOManager from './SEOManager';
 import { HelmetProvider } from 'react-helmet-async';
