@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
- // Ensure you have appropriate CSS
+
 
 const Portfolio = () => {
   const portfolioRef = useRef(null);
@@ -11,7 +11,7 @@ const Portfolio = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await axios.get('/api/projects'); // Adjust the URL as necessary
+        const response = await axios.get('/api/projects'); 
         setProjects(response.data);
         console.log(response.data);
       } catch (error) {
