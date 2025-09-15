@@ -147,8 +147,8 @@ import React, { useState, useEffect } from 'react';
 import { ExternalLink, Github, Clock, Zap, Globe, AlertCircle, X, Calendar, Code, Activity, Eye, Sparkles, Brain, Target, Layers } from 'lucide-react';
 
 // API tokens - in a real app, these should be environment variables
-const VERCEL_TOKEN = process.env.REACT_APP_VERCEL_TOKEN;
-const GEMINI_API = process.env.REACT_APP_GEMINI_API;
+const VERCEL_TOKEN = import.meta.env.VITE_VERCEL_TOKEN;
+const GEMINI_API = import.meta.env.VITE_GEMINI_API;
 
 const VercelProjectsShowcase = () => {
   const [projects, setProjects] = useState([]);
