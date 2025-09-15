@@ -9,7 +9,7 @@ const Resume = () => {
     const options = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.5 // Trigger animation when 50% of the element is visible
+      threshold: 0.5 
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -34,7 +34,7 @@ const Resume = () => {
 
   const handleDownloadResume = () => {
     const link = document.createElement('a');
-    link.href = resumePdf; // Path to your PDF file in the public directory
+    link.href = resumePdf; 
     link.download = 'bhaveshRsm.pdf';
     document.body.appendChild(link);
     link.click();

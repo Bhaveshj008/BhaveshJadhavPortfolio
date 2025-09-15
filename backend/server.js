@@ -15,18 +15,18 @@ const port_no = process.env.PORT || 3000;
 app.use(cors());
 app.use(bodyParser.json());
 
-// Configure the SMTP transporter with Bravo
+// smtp configuration
 const transporter = nodemailer.createTransport({
   host: process.env.BRAVO_SMTP_HOST,
   port: process.env.BRAVO_SMTP_PORT,
-  secure: false, // or true if using SSL
+  secure: false,
   auth: {
     user: process.env.BRAVO_SMTP_USER,
     pass: process.env.BRAVO_SMTP_PASS,
   },
 });
 
-// Async function to send emails
+
 const sendEmails = async (ownerMailOptions, userMailOptions) => {
   try {
     await transporter.sendMail(ownerMailOptions);
@@ -35,12 +35,12 @@ const sendEmails = async (ownerMailOptions, userMailOptions) => {
   } catch (error) {
     console.error('Error sending email:', error);
     console.log(address)
-    throw error; // Propagate the error to be caught in the API endpoint
+    throw error;
   }
 };
 
 // app.use(express.static('../dist'));
-// POST endpoint to handle contact form submissions
+
 
 
 
@@ -195,7 +195,7 @@ app.get('/api/blogs/:slug', async (req, res) => {
       });
     };
 
-    // Update the markdown content
+ 
     let updatedMarkdown = removeAlignAttribute(postData.content.markdown);
     
 
@@ -211,7 +211,7 @@ app.get('/api/blogs/:slug', async (req, res) => {
   }
 });
 
-// Get __dirname equivalent in ES module
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -232,7 +232,7 @@ app.get('/api/projects', (req, res) => {
   });
 });
 
-// Endpoint to get a single project by ID
+// Endpoint to get a single project
 app.get('/api/projects/:slug', (req, res) => {
   const projectSlug = req.params.slug;
   fs.readFile(projectsFilePath, (err, data) => {
@@ -253,7 +253,7 @@ app.get('/api/projects')
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
-// Start the server
+
 app.listen(port_no, () => {
   console.log(process.env.HASHNODE_USERNAME)
   console.log(`Server is running on port ${port_no}`);

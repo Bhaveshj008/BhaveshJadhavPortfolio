@@ -1,4 +1,4 @@
-// ImageComponent.jsx
+
 import React from 'react';
 
 const ImageComponent = ({ alt, src }) => {

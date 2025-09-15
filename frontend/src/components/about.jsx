@@ -12,10 +12,10 @@ const About = () => {
         if (entry.isIntersecting) {
           profileImgRef.current.classList.add('animate-profile');
           contentRef.current.classList.add('animate-content');
-          observer.unobserve(entry.target); // Optional: Stop observing once animation is triggered
+          observer.unobserve(entry.target); 
         }
       });
-    }, { threshold: 0.1 }); // Adjust threshold as needed
+    }, { threshold: 0.1 }); 
 
     observer.observe(aboutRef.current);
 

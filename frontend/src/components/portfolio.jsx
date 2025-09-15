@@ -471,7 +471,7 @@ const VercelProjectsShowcase = () => {
   }
 
   return (
-    <div style={styles.container}>
+    <div id="portfolio" style={styles.container}>
       <div style={styles.header}>
         <h1 style={styles.title}>My Vercel Projects</h1>
         <p style={styles.subtitle}>
