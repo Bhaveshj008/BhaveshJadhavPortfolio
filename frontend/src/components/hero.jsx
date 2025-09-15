@@ -5,6 +5,7 @@ function Hero() {
     <>
     <section id="hero" className="d-flex flex-column justify-content-center align-items-center">
     <div className="hero-container">
+      <h1>I'm</h1>
       <h1>Bhavesh Jadhav</h1>
       <TypedText/>
     </div>

@@ -39,7 +39,7 @@ const TypedText = () => {
 
   return (
     <p>
-      I'm <span className="typed">{typedLetters}</span>
+      <span className="typed">{typedLetters}</span>
     </p>
   );
 };
