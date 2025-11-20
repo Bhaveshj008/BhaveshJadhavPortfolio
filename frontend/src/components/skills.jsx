@@ -13,8 +13,10 @@ const Skills = () => {
       });
     }, { threshold: 0.1 });
 
-    const skillElements = skillsRef.current.querySelectorAll('.skill-category');
-    skillElements.forEach(el => observer.observe(el));
+    if (skillsRef.current) {
+      const skillElements = skillsRef.current.querySelectorAll('.skill-category');
+      skillElements.forEach(el => observer.observe(el));
+    }
 
     return () => observer.disconnect();
   }, []);
@@ -24,38 +26,75 @@ const Skills = () => {
       <div className="container">
         <div className="section-title">
           <h2>What I Know</h2>
-          
-
         </div>
+
         <div className="skills-table">
-          <div className="skill-category">
-            <div className="skill-category-name">Frontend</div>
-            <div className="skill-items">HTML, CSS, JS, React, Ajax, jQuery, Bootstrap, Tailwind CSS</div>
-          </div>
+
+          {/* BACKEND */}
           <div className="skill-category">
             <div className="skill-category-name">Backend</div>
-            <div className="skill-items">Node.js, Express, PHP, Python</div>
+            <div className="skill-items">
+              Node.js, Express.js, PostgreSQL, AWS Lambda, RDS Proxy,
+              Serverless Framework, SQS
+            </div>
           </div>
+
+          {/* FRONTEND */}
           <div className="skill-category">
-            <div className="skill-category-name">Databases</div>
-            <div className="skill-items"> MongoDB, MySQL</div>
+            <div className="skill-category-name">Frontend</div>
+            <div className="skill-items">
+              JavaScript (ES6+), React, React Native, Tailwind CSS
+            </div>
           </div>
+
+          {/* DATABASES & CACHING */}
           <div className="skill-category">
-            <div className="skill-category-name">Frameworks</div>
-            <div className="skill-items">Node.js, Express</div>
+            <div className="skill-category-name">Databases &amp; Caching</div>
+            <div className="skill-items">
+              PostgreSQL, MySQL, MongoDB
+            </div>
           </div>
+
+          {/* CLOUD & DEVOPS */}
           <div className="skill-category">
-            <div className="skill-category-name">Programming Languages</div>
-            <div className="skill-items">JS, PHP, Python, Java, C</div>
+            <div className="skill-category-name">Cloud &amp; DevOps</div>
+            <div className="skill-items">
+              AWS (Lambda, RDS Proxy, CloudWatch, EC2), Docker, CI/CD
+            </div>
           </div>
+
+          {/* TESTING & QUALITY */}
+          <div className="skill-category">
+            <div className="skill-category-name">Testing &amp; Quality</div>
+            <div className="skill-items">
+              Jest, Postman
+            </div>
+          </div>
+
+          {/* MONITORING & OBSERVABILITY */}
+          <div className="skill-category">
+            <div className="skill-category-name">Monitoring &amp; Observability</div>
+            <div className="skill-items">
+              CloudWatch, Automated Bug Tracking System
+            </div>
+          </div>
+
+          {/* VERSION CONTROL */}
           <div className="skill-category">
             <div className="skill-category-name">Version Control</div>
-            <div className="skill-items">Git, GitHub</div>
+            <div className="skill-items">
+              Git, GitHub, Bitbucket
+            </div>
           </div>
+
+          {/* OTHER */}
           <div className="skill-category">
-            <div className="skill-category-name">Tools</div>
-            <div className="skill-items">Postman, VScode</div>
+            <div className="skill-category-name">Other</div>
+            <div className="skill-items">
+              Open-source (npm package zod-fragments), Windows, Linux
+            </div>
           </div>
+
         </div>
       </div>
     </section>

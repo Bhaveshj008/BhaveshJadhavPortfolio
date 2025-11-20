@@ -69,7 +69,7 @@ function Header() {
                   </li>
                   <li>
                     <Link to="/" className="nav-link scrollto active" onClick={closeMobileMenu}>
-                      <i className="bx bx-file-blank"></i> <span>Resume</span>
+                      <i className="bx bx-file-blank"></i> <span>Experience</span>
                     </Link>
                   </li>
                   <li>
@@ -106,8 +106,8 @@ function Header() {
                     </a>
                   </li>
                   <li>
-                    <a href="#resume" className="nav-link scrollto" onClick={closeMobileMenu}>
-                      <i className="bx bx-file-blank"></i> <span>Resume</span>
+                    <a href="#experience" className="nav-link scrollto" onClick={closeMobileMenu}>
+                      <i className="bx bx-file-blank"></i> <span>Experience</span>
                     </a>
                   </li>
                   <li>

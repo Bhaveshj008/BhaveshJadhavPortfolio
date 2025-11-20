@@ -2,7 +2,13 @@ import React, { useState, useEffect } from 'react';
 
 const TypedText = () => {
   // Define typed items
-  const typedItems = ['Fullstack Developer', 'Web Developer', 'Programmer'];
+const typedItems = [
+  "Backend Engineer",
+  "Serverless Developer",
+  "Full-Stack Developer",
+  "React Native Developer"
+];
+
 
   // State to hold the current item being typed, the index of the next letter to display, and whether backspacing is in progress
   const [currentItemIndex, setCurrentItemIndex] = useState(0);
