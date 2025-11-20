@@ -148,6 +148,7 @@ import { ExternalLink, Github, Clock, Zap, Globe, AlertCircle, X, Calendar, Code
 
 // API tokens - in a real app, these should be environment variables
 const VERCEL_TOKEN = import.meta.env.VITE_VERCEL_TOKEN;
+// console.log(VERCEL_TOKEN)
 const GEMINI_API = import.meta.env.VITE_GEMINI_API;
 
 const VercelProjectsShowcase = () => {
@@ -333,7 +334,7 @@ const VercelProjectsShowcase = () => {
         Base everything on actual repository content, not generic assumptions.
       `;
 
-      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${GEMINI_API}`, {
+      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${GEMINI_API}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
